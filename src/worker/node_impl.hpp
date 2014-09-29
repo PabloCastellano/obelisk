@@ -26,7 +26,7 @@ public:
     BCS_API bc::blockchain& blockchain();
     BCS_API bc::transaction_pool& transaction_pool();
     BCS_API bc::transaction_indexer& transaction_indexer();
-    BCS_API bc::protocol& protocol();
+    BCS_API bc::network::protocol& protocol();
 
     // Threadpool for memory related operations.
     BCS_API bc::threadpool& memory_related_threadpool();
@@ -38,12 +38,12 @@ private:
     void start_session();
     void wait_and_retry_start(const std::error_code& ec);
 
-    void monitor_tx(const std::error_code& ec, bc::channel_ptr node);
+    void monitor_tx(const std::error_code& ec, bc::network::channel_ptr node);
     void recv_transaction(const std::error_code& ec,
-        const bc::transaction_type& tx, bc::channel_ptr node);
+        const bc::transaction_type& tx, bc::network::channel_ptr node);
     void handle_mempool_store(
         const std::error_code& ec, const bc::index_list& unconfirmed,
-        const bc::transaction_type& tx, bc::channel_ptr node);
+        const bc::transaction_type& tx, bc::network::channel_ptr node);
 
     void reorganize(const std::error_code& ec,
         size_t fork_point,
@@ -53,10 +53,10 @@ private:
     std::ofstream outfile_, errfile_;
     bc::threadpool network_pool_, disk_pool_, mem_pool_;
     // Services
-    bc::hosts hosts_;
-    bc::handshake handshake_;
-    bc::network network_;
-    bc::protocol protocol_;
+    bc::network::hosts hosts_;
+    bc::network::handshake handshake_;
+    bc::network::network network_;
+    bc::network::protocol protocol_;
 //    bc::leveldb_blockchain chain_;
     bc::poller poller_;
     bc::transaction_pool txpool_;

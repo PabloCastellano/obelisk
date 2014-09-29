@@ -1,6 +1,5 @@
 #include <random>
-#include <bitcoin/format.hpp>
-#include <bitcoin/utility/assert.hpp>
+#include <bitcoin/bitcoin.hpp>
 #include <obelisk/message.hpp>
 
 namespace obelisk {
