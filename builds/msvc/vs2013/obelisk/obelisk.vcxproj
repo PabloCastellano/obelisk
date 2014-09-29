@@ -57,6 +57,7 @@
   </ItemGroup>
   <PropertyGroup Label="Configuration">
     <PlatformToolset>CTP_Nov2013</PlatformToolset>
+    <NuGetPackageImportStamp>410c971f</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -228,10 +229,10 @@
     <Import Project="..\..\..\..\..\..\nuget\zlib.redist.1.2.8.6\build\native\zlib.redist.targets" Condition="Exists('..\..\..\..\..\..\nuget\zlib.redist.1.2.8.6\build\native\zlib.redist.targets')" />
     <Import Project="..\..\..\..\..\..\nuget\zlib.1.2.8.6\build\native\zlib.targets" Condition="Exists('..\..\..\..\..\..\nuget\zlib.1.2.8.6\build\native\zlib.targets')" />
     <Import Project="..\..\..\..\..\..\nuget\libconfig_vc120.1.4.9.4\build\native\libconfig_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\libconfig_vc120.1.4.9.4\build\native\libconfig_vc120.targets')" />
-    <Import Project="..\..\..\..\..\..\nuget\libsodium_vc120.0.4.5.1\build\native\libsodium_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\libsodium_vc120.0.4.5.1\build\native\libsodium_vc120.targets')" />
-    <Import Project="..\..\..\..\..\..\nuget\libzmq_vc120.4.1.0.4\build\native\libzmq_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\libzmq_vc120.4.1.0.4\build\native\libzmq_vc120.targets')" />
-    <Import Project="..\..\..\..\..\..\nuget\czmq_vc120.2.2.0.7\build\native\czmq_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\czmq_vc120.2.2.0.7\build\native\czmq_vc120.targets')" />
-    <Import Project="..\..\..\..\..\..\nuget\czmqpp_vc120.1.0.0.3\build\native\czmqpp_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\czmqpp_vc120.1.0.0.3\build\native\czmqpp_vc120.targets')" />
+    <Import Project="..\..\..\..\..\..\nuget\libzmq_vc120.4.1.0.7\build\native\libzmq_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\libzmq_vc120.4.1.0.7\build\native\libzmq_vc120.targets')" />
+    <Import Project="..\..\..\..\..\..\nuget\czmq_vc120.2.2.0.8\build\native\czmq_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\czmq_vc120.2.2.0.8\build\native\czmq_vc120.targets')" />
+    <Import Project="..\..\..\..\..\..\nuget\czmqpp_vc120.1.0.0.10\build\native\czmqpp_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\czmqpp_vc120.1.0.0.10\build\native\czmqpp_vc120.targets')" />
+    <Import Project="..\..\..\..\..\..\nuget\libsodium_vc120.0.6.0.1\build\native\libsodium_vc120.targets" Condition="Exists('..\..\..\..\..\..\nuget\libsodium_vc120.0.6.0.1\build\native\libsodium_vc120.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -247,9 +248,9 @@
     <Error Condition="!Exists('..\..\..\..\..\..\nuget\zlib.redist.1.2.8.6\build\native\zlib.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\zlib.redist.1.2.8.6\build\native\zlib.redist.targets'))" />
     <Error Condition="!Exists('..\..\..\..\..\..\nuget\zlib.1.2.8.6\build\native\zlib.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\zlib.1.2.8.6\build\native\zlib.targets'))" />
     <Error Condition="!Exists('..\..\..\..\..\..\nuget\libconfig_vc120.1.4.9.4\build\native\libconfig_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\libconfig_vc120.1.4.9.4\build\native\libconfig_vc120.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\..\nuget\libsodium_vc120.0.4.5.1\build\native\libsodium_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\libsodium_vc120.0.4.5.1\build\native\libsodium_vc120.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\..\nuget\libzmq_vc120.4.1.0.4\build\native\libzmq_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\libzmq_vc120.4.1.0.4\build\native\libzmq_vc120.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\..\nuget\czmq_vc120.2.2.0.7\build\native\czmq_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\czmq_vc120.2.2.0.7\build\native\czmq_vc120.targets'))" />
-    <Error Condition="!Exists('..\..\..\..\..\..\nuget\czmqpp_vc120.1.0.0.3\build\native\czmqpp_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\czmqpp_vc120.1.0.0.3\build\native\czmqpp_vc120.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\..\nuget\libzmq_vc120.4.1.0.7\build\native\libzmq_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\libzmq_vc120.4.1.0.7\build\native\libzmq_vc120.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\..\nuget\czmq_vc120.2.2.0.8\build\native\czmq_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\czmq_vc120.2.2.0.8\build\native\czmq_vc120.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\..\nuget\czmqpp_vc120.1.0.0.10\build\native\czmqpp_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\czmqpp_vc120.1.0.0.10\build\native\czmqpp_vc120.targets'))" />
+    <Error Condition="!Exists('..\..\..\..\..\..\nuget\libsodium_vc120.0.6.0.1\build\native\libsodium_vc120.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\..\..\nuget\libsodium_vc120.0.6.0.1\build\native\libsodium_vc120.targets'))" />
   </Target>
 </Project>
