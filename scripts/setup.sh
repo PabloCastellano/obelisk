@@ -47,7 +47,7 @@ create_ob_user(){
 }
 
 config_logfiles(){
-    if [ -n "`grep -E \"\/var\/lib\/blockchain\/\" /etc/obelisk/worker.cfg`" ]; then
+    if [ -n "`grep -E \"blockchain-path\" /etc/obelisk/worker.cfg`" ]; then
     	sed -r -i -e "s/blockchain\-path =.*?$/blockchain-path = \"\/var\/lib\/blockchain\/\"/g" $WORKER 
     	sed -r -i -e "s/debug\.log/\/var\/lib\/blockchain\/debug.log/g" $WORKER 
     	sed -r -i -e "s/error\.log/\/var\/lib\/blockchain\/error.log/g" $WORKER
