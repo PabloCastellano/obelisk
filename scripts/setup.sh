@@ -38,9 +38,9 @@ create_ob_user(){
         echo " --> Creating ob user"
     	echo
     	adduser --system --disabled-password --shell /bin/bash --home /var/lib/blockchain --group ob
-    	sx initchain /var/lib/blockchain/
+        su -c "sx initchain /var/lib/blockchain/" ob
     else
-	    sx initchain /var/lib/blockchain/
+	    su -c "sx initchain /var/lib/blockchain/" ob
 	    echo " --> ob user already exists: skipping..."
         echo
     fi
