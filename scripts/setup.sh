@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Script to setup obworker and obbalancer daemons, required for an Obelisk node.
+# Script to setup obworker daemon, required for an Obelisk node.
 #
 # For Debian, Ubuntu or Fedora GNU/Linux distributions.
 #
@@ -73,18 +73,12 @@ setup_init_scripts(){
     echo " --> Setting up init scripts..."
     echo
     chmod +x $SOURCE/init.d/obworker      
-    chmod +x $SOURCE/init.d/obbalancer      
     ln -sf $SOURCE/init.d/obworker /etc/init.d/obworker     
-    ln -sf $SOURCE/init.d/obbalancer /etc/init.d/obbalancer
     update-rc.d obworker defaults 80
-    echo
-    update-rc.d obbalancer defaults 81
     echo
     echo "Starting services..."
     echo
     service obworker start
-    echo
-    service obbalancer start
     echo "All done!"
     echo
 }
