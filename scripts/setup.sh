@@ -18,7 +18,7 @@
 #
 set -e
 echo
-echo " [+] Welcome to Obelisk worker and balancer daemon setup."
+echo " [+] Welcome to Obelisk worker daemon setup."
 echo " IMPORTANT: This script requires previous installation of"
 echo " libbitcoin, libwallet and obelisk IN DEFAULT LOCATIONS."
 echo
