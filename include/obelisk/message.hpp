@@ -2,7 +2,6 @@
 #define OBELISK_CLIENT_MESSAGE
 
 #include <czmq++/czmqpp.hpp>
-#include <bitcoin/types.hpp>
 
 namespace obelisk {
 
