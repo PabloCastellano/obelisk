@@ -1,8 +1,8 @@
 #include <obelisk/message.hpp>
 
 #include <random>
-//#include <bitcoin/utility/endian.hpp>
-#include <bitcoin/utility/assert.hpp>
+#include <bitcoin/utility/endian.hpp>
+#include <bitcoin/bitcoin/utility/assert.hpp>
 
 namespace obelisk {
 

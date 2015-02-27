@@ -1,6 +1,6 @@
 #include "worker.hpp"
 
-//#include <bitcoin/utility/endian.hpp>
+#include <bitcoin/utility/endian.hpp>
 #include <bitcoin/utility/logger.hpp>
 #include "echo.hpp"
 
